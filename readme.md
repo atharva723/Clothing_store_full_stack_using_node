@@ -79,6 +79,24 @@ frontend/
 ```
 
 ---
+## Screenshots
+
+### Homepage
+![Homepage](screenshots/homepage.png)
+
+### Product Gallery
+![Product Gallery](screenshots/gal1.png)
+![Product Gallery](screenshots/gal2.png)
+
+### Adding items to cart
+![Adding items to cart](screenshots/addcart1.png)
+![Adding items to cart](screenshots/cartdb.png)
+
+
+### Order confirmed
+![Order confirmed](screenshots/order.png)
+![Order confirmed](screenshots/orderdb.png)
+
 
 ## 🧠 How the Application Works
 
