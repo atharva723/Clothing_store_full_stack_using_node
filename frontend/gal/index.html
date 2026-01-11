@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5feettin Spring Summer 25</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+    <div class="header-content">
+
+      <nav class="nav-desktop">
+        <ul>
+          <li><a href="#" class="nav-link">SHOP</a></li>
+          <li><a href="#" class="nav-link">LOOKBOOK</a></li>
+          <li><a href="#" class="nav-link">STORES</a></li>
+          <li><a href="#" class="nav-link">PROJECTS</a></li>
+        </ul>
+      </nav>
+
+      <a href="" class="logo">
+        <img src="https://c.animaapp.com/mk7u42woVEgYi7/assets/1.svg" alt="Dime" />
+      </a>
+
+      <div class="header-right">
+        <button class="currency-selector">$CAD (EN)</button>
+        <button class="cart-btn">CART (0)</button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ================= MAIN ================= -->
+  <main class="main-content">
+
+    <!-- Collection Header -->
+    <div class="collection-header">
+      <!-- intentionally empty (design preserved) -->
+    </div>
+
+    <!-- Toolbar -->
+    <div class="container">
+      <div class="toolbar">
+
+        <div class="toolbar-left">
+          <button class="filter-btn">
+            <i class="fas fa-sliders-h"></i>
+          </button>
+
+          <div class="sort-dropdown">
+            <span>Date, new to old</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+        </div>
+
+        <div class="view-switcher">
+          <div class="view-icon">
+            <i class="fas fa-pause" style="transform: rotate(90deg);"></i>
+          </div>
+          <div class="view-icon active">
+            <i class="fas fa-bars"></i>
+          </div>
+          <div class="view-icon">
+            <i class="fas fa-th"></i>
+          </div>
+          <div class="view-icon">
+            <i class="fas fa-align-justify"></i>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ================= PRODUCT GRID ================= -->
+    <!-- 🔴 ONLY CHANGE: dynamic container -->
+    <div class="product-grid" id="productGrid"></div>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <!-- Footer content would go here -->
+  </footer>
+
+  <!-- 🔴 ONLY CHANGE: backend wiring (no UI impact) -->
+  <script src="./products.js"></script>
+  
+
+  <script src="./cart.js"></script>
+<!-- cart drawer HTML here -->
+
+<!-- ================= CART DRAWER ================= -->
+<div id="cartDrawer" style="
+  position: fixed;
+  top: 0;
+  right: -420px;
+  width: 420px;
+  height: 100vh;
+  background: #fff;
+  z-index: 9999;
+  box-shadow: -10px 0 40px rgba(0,0,0,0.15);
+  transition: right 0.3s ease;
+  display: flex;
+  flex-direction: column;
+">
+
+  <div style="padding: 24px; border-bottom: 1px solid #e5e5e5; display:flex; justify-content:space-between;">
+    <strong>CART</strong>
+    <button onclick="closeCart()">✕</button>
+  </div>
+
+  <div id="cartItems" style="flex:1; overflow:auto; padding:24px;"></div>
+
+  <div style="border-top:1px solid #e5e5e5; padding:24px;">
+    <div style="display:flex; justify-content:space-between; margin-bottom:16px;">
+      <strong>Total</strong>
+      <strong id="cartTotal">Rs. 0</strong>
+    </div>
+
+    <form id="checkoutForm">
+      <input required placeholder="Name" style="width:100%; margin-bottom:8px; padding:10px;">
+      <input required placeholder="Email" style="width:100%; margin-bottom:8px; padding:10px;">
+      <textarea placeholder="Address" style="width:100%; margin-bottom:12px; padding:10px;"></textarea>
+
+      <button type="submit" style="
+        width:100%;
+        padding:12px;
+        background:black;
+        color:white;
+        border:none;
+        text-transform:uppercase;
+        letter-spacing:1px;
+      ">
+        Checkout
+      </button>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>
